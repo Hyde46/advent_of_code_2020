@@ -1,6 +1,6 @@
 use std::collections::HashSet;
 
-fn main() {
+pub fn day1() {
     println!("AoC - Day 1: Report Repair");
     let expense_report = vec![
         1078,
