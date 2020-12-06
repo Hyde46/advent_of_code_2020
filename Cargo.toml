@@ -1,0 +1,10 @@
+[package]
+name = "adventofcode"
+version = "0.1.0"
+authors = ["monarch"]
+edition = "2018"
+
+
+[[examples]]
+name = "day_1_a"
+path = "src/examples/day_1/solution_a.rs"
