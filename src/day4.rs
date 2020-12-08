@@ -1,10 +1,5 @@
-use recap::Recap;
-use serde::Deserialize;
+use std::collections::HashMap;
 
-#[derive(Debug, Deserialize, Recap)]
-#[recap(
-    regex = r#"^(?=.*ecl:(?Pecl<ecl>.*))(?=.*pid:*)(?=.*eyr:*)(?=.*hcl:*)(?=.*iyr:*)(?=.*byr:*)(?=.*hgt:*).*$"#
-)]
 struct Passport {
     ecl: String,
     pid: usize,
@@ -13,4 +8,16 @@ struct Passport {
     iyr: usize,
     byr: usize,
     hgt: String,
+}
+
+pub fn part1() {
+    let result = include_str!("inputs/day4")
+        .split("\n\n")
+        .filter(|entry| {
+            vec!["ecl:", "pid:", "eyr:", "hcl:", "iyr:", "byr:", "hgt:"]
+                .iter()
+                .all(|&x| entry.contains(x))
+        })
+        .count();
+    println!("{}", result);
 }
