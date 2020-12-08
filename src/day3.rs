@@ -23,7 +23,7 @@ pub fn part2() {
                 .enumerate()
                 .filter(|(pos, _)| pos % slope_y == 0)
                 .map(|(_, e)| e)
-                .enumerate()
+                .enumerate() // reset `counter`
                 .filter(|(pos, e)| e.chars().nth((pos * slope_x) % map_width).unwrap() == '#')
                 .count()
         })
