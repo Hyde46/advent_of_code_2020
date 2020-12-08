@@ -27,8 +27,7 @@ pub fn part1() {
         .lines()
         .filter(|x| x.parse::<Policy>().unwrap().valid())
         .count();
-
-    assert_eq!(result, 469);
+    assert_eq!(result, 434);
 }
 
 pub fn part2() {

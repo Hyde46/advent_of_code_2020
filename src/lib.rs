@@ -1,5 +1,6 @@
 pub mod day1;
 pub mod day2;
+pub mod day3;
 
 #[cfg(test)]
 mod tests {
@@ -17,5 +18,15 @@ mod tests {
     #[test]
     fn day2part2() {
         day2::part2();
+    }
+
+    #[test]
+    fn day3part1() {
+        day3::part1();
+    }
+
+    #[test]
+    fn day3part2() {
+        day3::part2();
     }
 }
